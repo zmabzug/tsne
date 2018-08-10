@@ -8,10 +8,14 @@ To upload a new version:
 import os
 import sys
 import platform
+import subprocess
 
 from distutils.core import setup
 from setuptools import find_packages
 from distutils.extension import Extension
+
+subprocess.run('pip install numpy'.split())
+subprocess.run('pip install Cython'.split())
 
 import versioneer
 import numpy
